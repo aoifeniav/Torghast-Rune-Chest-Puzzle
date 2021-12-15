@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+:root {
+  --color-primary: #d0ddd7;
+  --color-shiny: #fca311;
+  --color-bg: #3f4045;
+  --color-rune-green: #affc41;
+  --color-rune-orange: #ff9f1c;
+  --color-rune-purple: #9b5de5;
+  --color-rune-blue: #00bbf9;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+header {
+  margin: 60px 0;
+}
+
+main {
+  margin: 0 auto;
+  width: 330px;
+}
+
+#chest {
+  width: 100%;
+  margin: 15px 0;
+  font-size: xxx-large;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.handle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.handle-container :first-child {
+  margin-bottom: 40px;
+}
+
+.handle-container :last-child {
+  margin-top: 20px;
+}
+
+.handle-container :last-child:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'fonts';
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-primary);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+header {
+    margin: 60px 0;
+}
+
+main {
+    margin: 0 auto;
+    width: 330px;
+}
+
+#chest {
+    width: 100%;
+    margin: 15px 0;
+    font-size: xxx-large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.handle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    :first-child {
+        margin-bottom: 40px;
+    }
+
+    :last-child {
+        margin-top: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
