@@ -1,14 +1,14 @@
 /**
- * Rearranges items in the handles array.
- * @param {Array} handles 
+ * Rearranges items in an array.
+ * @param {Array} array 
  */
- function shuffleHandles(handles) {
-    const shuffledHandles = handles
+ function shuffleArray(array) {
+    const shuffledArray = array
       .map(value => ({ value, key: Math.random() }))
       .sort((a, b) => a.key - b.key)
       .map(({ value }) => value);
 
-    return shuffledHandles;
+    return shuffledArray;
 }
 
 /**

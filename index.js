@@ -24,7 +24,7 @@ function initHandles() {
     }
 
     console.log('Handles all the way ->', handles);
-    setCountChanges(shuffleHandles(handles));
+    setCountChanges(shuffleArray(handles));
 }
 
 /**
@@ -36,7 +36,7 @@ function initHandles() {
         handles[i].changesCount = i + 1;
     }
 
-    setColors(shuffleHandles(handles));
+    setColors(shuffleArray(handles));
 }
 
 /**
