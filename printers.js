@@ -1,15 +1,3 @@
-/**
- * Creates an HTML element applying all classes given in an array.
- * @param {string} htmlTag 
- * @param {Array} classNames 
- * @returns 
- */
-function createElement(htmlTag, classNames) {
-    const element = document.createElement(htmlTag);
-    element.classList.add(...classNames);
-    return element;
-}
-
 function renderHandles(handlesGroup) {
     const container = document.getElementById('chest');
 
@@ -65,7 +53,6 @@ function createHandleElements(handles) {
         handleElements.push(skull);
 
         handlesGroup.push(handleElements);
-        console.log(handleElements);
     }
 
     return handlesGroup;
