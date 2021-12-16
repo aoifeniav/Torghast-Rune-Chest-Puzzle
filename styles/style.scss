@@ -1,10 +1,11 @@
-@import 'variables';
-@import 'fonts';
+@import "variables";
+@import "mixin";
+@import "fonts";
 
 body {
     background-color: var(--color-bg);
     color: var(--color-primary);
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     text-align: center;
 }
 
@@ -38,16 +39,27 @@ main {
 
     :last-child {
         margin-top: 20px;
-
-        &:hover {
-            cursor: pointer;
-        }
+        @include pointer;
     }
 }
 
 .rune {
     color: #ffffff;
-    font-family: 'Grand Hotel', sans-serif;
+    font-family: "Grand Hotel", sans-serif;
 }
 
-@import 'neon';
+button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    color: inherit;
+    border-style: none;
+    @include pointer;
+}
+
+#reset {
+    margin-top: 100px;
+}
+
+@import "neon";

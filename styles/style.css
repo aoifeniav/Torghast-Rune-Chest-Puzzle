@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
 :root {
   --color-primary: #d0ddd7;
-  --color-shiny: #fca311;
+  --color-secondary: #4a589e;
   --color-bg: #3f4045;
   --color-rune-green: #affc41;
   --color-rune-orange: #ff9f1c;
@@ -13,7 +13,7 @@
 body {
   background-color: var(--color-bg);
   color: var(--color-primary);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-align: center;
 }
 
@@ -71,7 +71,24 @@ main {
 
 .rune {
   color: #ffffff;
-  font-family: 'Grand Hotel', sans-serif;
+  font-family: "Grand Hotel", sans-serif;
+}
+
+button {
+  font-family: inherit;
+  font-size: 100%;
+  padding: 10px;
+  background-color: var(--color-secondary);
+  color: inherit;
+  border-style: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#reset {
+  margin-top: 100px;
 }
 
 .pulse-green {
