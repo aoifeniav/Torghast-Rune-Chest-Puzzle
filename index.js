@@ -53,7 +53,7 @@ function setHandlesColors(handles) {
         handles[i].color = i;
 
         // Forces all handles to initialize as locked (color !== unlockColor).
-        if (handles[i].color == handles[i].unlockColor) {
+        if (handles[i].isUnlocked()) {
             handles[i].color = (handles[i].color + 1) % 4;
         }
     }
