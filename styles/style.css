@@ -91,12 +91,12 @@ button:hover {
   margin-top: 100px;
 }
 
-.pulse-green {
-  -webkit-animation: pulse-green 1s infinite alternate;
-          animation: pulse-green 1s infinite alternate;
+.green {
+  -webkit-animation: green 1s infinite alternate;
+          animation: green 1s infinite alternate;
 }
 
-@-webkit-keyframes pulse-green {
+@-webkit-keyframes green {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 50px var(--color-rune-green);
   }
@@ -105,7 +105,7 @@ button:hover {
   }
 }
 
-@keyframes pulse-green {
+@keyframes green {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 50px var(--color-rune-green);
   }
@@ -114,12 +114,12 @@ button:hover {
   }
 }
 
-.pulse-orange {
-  -webkit-animation: pulse-orange 1s infinite alternate;
-          animation: pulse-orange 1s infinite alternate;
+.orange {
+  -webkit-animation: orange 1s infinite alternate;
+          animation: orange 1s infinite alternate;
 }
 
-@-webkit-keyframes pulse-orange {
+@-webkit-keyframes orange {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 50px var(--color-rune-orange);
   }
@@ -128,7 +128,7 @@ button:hover {
   }
 }
 
-@keyframes pulse-orange {
+@keyframes orange {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 50px var(--color-rune-orange);
   }
@@ -137,12 +137,12 @@ button:hover {
   }
 }
 
-.pulse-purple {
-  -webkit-animation: pulse-purple 1s infinite alternate;
-          animation: pulse-purple 1s infinite alternate;
+.purple {
+  -webkit-animation: purple 1s infinite alternate;
+          animation: purple 1s infinite alternate;
 }
 
-@-webkit-keyframes pulse-purple {
+@-webkit-keyframes purple {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 50px var(--color-rune-purple);
   }
@@ -151,7 +151,7 @@ button:hover {
   }
 }
 
-@keyframes pulse-purple {
+@keyframes purple {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 50px var(--color-rune-purple);
   }
@@ -160,12 +160,12 @@ button:hover {
   }
 }
 
-.pulse-blue {
-  -webkit-animation: pulse-blue 1s infinite alternate;
-          animation: pulse-blue 1s infinite alternate;
+.blue {
+  -webkit-animation: blue 1s infinite alternate;
+          animation: blue 1s infinite alternate;
 }
 
-@-webkit-keyframes pulse-blue {
+@-webkit-keyframes blue {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 50px var(--color-rune-blue);
   }
@@ -174,7 +174,7 @@ button:hover {
   }
 }
 
-@keyframes pulse-blue {
+@keyframes blue {
   100% {
     text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 50px var(--color-rune-blue);
   }

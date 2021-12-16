@@ -1,8 +1,8 @@
-.pulse-green {
-    animation: pulse-green 1s infinite alternate;
+.green {
+    animation: green 1s infinite alternate;
 }
 
-@keyframes pulse-green {
+@keyframes green {
     100% {
         text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 50px var(--color-rune-green);
     }
@@ -11,11 +11,11 @@
     }
 }
 
-.pulse-orange {
-    animation: pulse-orange 1s infinite alternate;
+.orange {
+    animation: orange 1s infinite alternate;
 }
 
-@keyframes pulse-orange {
+@keyframes orange {
     100% {
         text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 50px var(--color-rune-orange);
     }
@@ -24,11 +24,11 @@
     }
 }
 
-.pulse-purple {
-    animation: pulse-purple 1s infinite alternate;
+.purple {
+    animation: purple 1s infinite alternate;
 }
 
-@keyframes pulse-purple {
+@keyframes purple {
     100% {
         text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 50px var(--color-rune-purple);
     }
@@ -37,11 +37,11 @@
     }
 }
 
-.pulse-blue {
-    animation: pulse-blue 1s infinite alternate;
+.blue {
+    animation: blue 1s infinite alternate;
 }
 
-@keyframes pulse-blue {
+@keyframes blue {
     100% {
         text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 50px var(--color-rune-blue);
     }
