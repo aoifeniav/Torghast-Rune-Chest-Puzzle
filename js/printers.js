@@ -53,26 +53,9 @@ function createChain(handle) {
  * @returns rune HTML element.
  */
 function createRune(handle) {
-    let rune;
-    switch (handle.color) {
-        case 0:
-            rune = createElement('span', ['rune', 'green']);
-            rune.innerText = '8';
-            break;
-        case 1:
-            rune = createElement('span', ['rune', 'orange']);
-            rune.innerText = 'N';
-            break;
-        case 2:
-            rune = createElement('span', ['rune', 'purple']);
-            rune.innerText = 'K';
-            break;
-        case 3:
-            rune = createElement('span', ['rune', 'blue']);
-            rune.innerText = 'R';
-            break;
-    }
-
+    const rune = createElement('span');
+    rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`;
+    rune.innerText = RUNE_SETTINGS[handle.color].text;
     rune.setAttribute('id', `rune_${handle.unlockColor}`);
     return rune;
 }
@@ -90,4 +73,30 @@ function createSkull(handle, handles) {
     });
 
     return skull;
+}
+
+/**
+ * Changes the runes according to the clicked skull's changesCount.
+ * @param {number} clickedSkullChangesCount 
+ * @param {Array} handles
+ */
+function changeRunes(clickedSkullChangesCount, handles) {
+    for (let handle of handles) {
+        if (clickedSkullChangesCount <= handle.changesCount) {
+            handle.color = (++handle.color) % 4;
+        }
+
+        const chain = document.getElementById(`chain_${handle.unlockColor}`);
+        if (handle.isUnlocked()) {
+            chain.classList.remove('fa-link');
+            chain.classList.add('fa-unlink');
+        } else {
+            chain.classList.remove('fa-unlink');
+            chain.classList.add('fa-link');
+        }
+
+        const rune = document.getElementById(`rune_${handle.unlockColor}`);
+        rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`;
+        rune.innerText = RUNE_SETTINGS[handle.color].text;
+    }
 }

@@ -2,7 +2,7 @@
  * Rearranges items in an array.
  * @param {Array} array 
  */
- function shuffleArray(array) {
+function shuffleArray(array) {
     const shuffledArray = array
       .map(value => ({ value, key: Math.random() }))
       .sort((a, b) => a.key - b.key)
@@ -17,7 +17,7 @@
  * @param {number} max 
  * @returns 
  */
- function randomInteger(min, max) {
+function randomInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
@@ -29,6 +29,8 @@
 */
 function createElement(htmlTag, classNames) {
     const element = document.createElement(htmlTag);
+    if (classNames) {
     element.classList.add(...classNames);
+    }
     return element;
 }
