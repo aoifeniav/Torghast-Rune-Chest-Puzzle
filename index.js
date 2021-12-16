@@ -30,7 +30,7 @@ function initHandles() {
  * Sets how many runes each handle changes, then shuffles and calls to setColors.
  * @param {Array} handles 
  */
- function setCountChanges(handles) {
+function setCountChanges(handles) {
     for (let i = 0; i < 4; i++) {
         handles[i].changesCount = i + 1;
     }
@@ -52,10 +52,23 @@ function setColors(handles) {
         }
     }
 
-    console.log('Handles all the way ->', handles);
-
     const handlesGroup = createHandleElements(handles);
     renderHandles(handlesGroup);
+}
+
+/**
+ * Changes the runes according to the clicked skull's changesCount.
+ * @param {number} clickedSkullChangesCount 
+ * @param {Array} handles
+ */
+function changeRunes(clickedSkullChangesCount, handles) {
+    for (let handle of handles) {
+        if (clickedSkullChangesCount <= handle.changesCount) {
+            handle.color = (handle.color + 1) % 4;
+        }
+    }
+    // TODO: Re-render runes with new values.
+    console.log('new handles ->', handles);
 }
 
 /**
