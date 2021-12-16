@@ -18,25 +18,11 @@ function createHandleElements(handles) {
     for (const handle of handles) {
         const handleElements = [];
 
-        // Creates chain icon.
-        if (handle.isUnlocked()) {
-            const lockedChain = createElement('i', ['fa-unlink', 'fas']);
-            handleElements.push(lockedChain);
-        } else {
-            const unlockedChain = createElement('i', ['fa-link', 'fas']);
-            handleElements.push(unlockedChain);
-        }
-
-        // Creates rune icon.
+        const chain = createChain(handle);
         const rune = createRune(handle);
-        handleElements.push(rune);
-
-        // Creates skull icon and adds an event listener to each skull that will change runes (on click) according to the skull's changesCount.
-        const skull = createElement('i', ['fa-skull', 'fas']);
-        skull.addEventListener('click', function () {
-            changeRunes(handle.changesCount, handles);
-        });
-        handleElements.push(skull);
+        const skull = createSkull(handle, handles);
+    
+        handleElements.push(chain, rune, skull);
 
         // Adds each handle group to an array with all 4 handles.
         handlesGroup.push(handleElements);
@@ -45,6 +31,26 @@ function createHandleElements(handles) {
     return handlesGroup;
 }
 
+/**
+ * Creates chain icon.
+ * @param {Object} handle 
+ * @returns chain HTML element.
+ */
+function createChain(handle) {
+    if (handle.isUnlocked()) {
+        const chain = createElement('i', ['fa-unlink', 'fas']);
+        return chain;
+    } else {
+        const chain = createElement('i', ['fa-link', 'fas']);
+        return chain;
+    }
+}
+
+/**
+ * Creates rune icon.
+ * @param {Object} handle 
+ * @returns rune HTML element.
+ */
 function createRune(handle) {
     let rune;
     switch (handle.color) {
@@ -67,4 +73,19 @@ function createRune(handle) {
     }
 
     return rune;
+}
+
+/**
+ * Creates skull icon and adds an event listener to each skull that will change runes (on click) according to the skull's changesCount.
+ * @param {Object} handle 
+ * @param {Array} handles 
+ * @returns skull HTML element.
+ */
+function createSkull(handle, handles) {
+    const skull = createElement('i', ['fa-skull', 'fas']);
+    skull.addEventListener('click', function () {
+        changeRunes(handle.changesCount, handles);
+    });
+
+    return skull;
 }
