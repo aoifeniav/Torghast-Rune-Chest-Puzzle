@@ -12,6 +12,25 @@ class Handle {
     }
 }
 
+const RUNE_SETTINGS = {
+    0: {
+        color: 'green',
+        text: '8'
+    },
+    1: {
+        color: 'orange',
+        text: 'N'
+    },
+    2: {
+        color: 'purple',
+        text: 'K'
+    },
+    3: {
+        color: 'blue',
+        text: 'R'
+    },
+}
+
 /**
  * Initialises 4 handles and sets each handle's unlock color, then shuffles and calls to setCountChanges.
  */
@@ -48,7 +67,7 @@ function setColors(handles) {
 
         // Forces all handles to initialize as locked (color !== unlockColor).
         if (handle.isUnlocked()) {
-            handle.color = (handle.color + 1) % 4;
+            handle.color = (++handle.color) % 4;
         }
     }
 
@@ -64,11 +83,22 @@ function setColors(handles) {
 function changeRunes(clickedSkullChangesCount, handles) {
     for (let handle of handles) {
         if (clickedSkullChangesCount <= handle.changesCount) {
-            handle.color = (handle.color + 1) % 4;
+            handle.color = (++handle.color) % 4;
         }
+
+        const chain = document.getElementById(`chain_${handle.unlockColor}`);
+        if (handle.isUnlocked()) {
+            chain.classList.remove('fa-link');
+            chain.classList.add('fa-unlink');
+        } else {
+            chain.classList.remove('fa-unlink');
+            chain.classList.add('fa-link');
+        }
+
+        const rune = document.getElementById(`rune_${handle.unlockColor}`);
+        rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`;
+        rune.innerText = RUNE_SETTINGS[handle.color].text;
     }
-    // TODO: Re-render runes with new values.
-    console.log('new handles ->', handles);
 }
 
 /**

@@ -37,13 +37,14 @@ function createHandleElements(handles) {
  * @returns chain HTML element.
  */
 function createChain(handle) {
+    let chain;
     if (handle.isUnlocked()) {
-        const chain = createElement('i', ['fa-unlink', 'fas']);
-        return chain;
+        chain = createElement('i', ['fa-unlink', 'fas']);
     } else {
-        const chain = createElement('i', ['fa-link', 'fas']);
-        return chain;
+        chain = createElement('i', ['fa-link', 'fas']);
     }
+    chain.setAttribute('id', `chain_${handle.unlockColor}`);
+    return chain;
 }
 
 /**
@@ -55,23 +56,24 @@ function createRune(handle) {
     let rune;
     switch (handle.color) {
         case 0:
-            rune = createElement('span', ['rune', 'pulse-green']);
+            rune = createElement('span', ['rune', 'green']);
             rune.innerText = '8';
             break;
         case 1:
-            rune = createElement('span', ['rune', 'pulse-orange']);
+            rune = createElement('span', ['rune', 'orange']);
             rune.innerText = 'N';
             break;
         case 2:
-            rune = createElement('span', ['rune', 'pulse-purple']);
+            rune = createElement('span', ['rune', 'purple']);
             rune.innerText = 'K';
             break;
         case 3:
-            rune = createElement('span', ['rune', 'pulse-blue']);
+            rune = createElement('span', ['rune', 'blue']);
             rune.innerText = 'R';
             break;
     }
 
+    rune.setAttribute('id', `rune_${handle.unlockColor}`);
     return rune;
 }
 
