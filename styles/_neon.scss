@@ -1,0 +1,51 @@
+.pulse-green {
+    animation: pulse-green 1s infinite alternate;
+}
+
+@keyframes pulse-green {
+    100% {
+        text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 50px var(--color-rune-green);
+    }
+    0% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-green), 0 0 26px var(--color-rune-green), 0 0 36px var(--color-rune-green);
+    }
+}
+
+.pulse-orange {
+    animation: pulse-orange 1s infinite alternate;
+}
+
+@keyframes pulse-orange {
+    100% {
+        text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 50px var(--color-rune-orange);
+    }
+    0% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-orange), 0 0 26px var(--color-rune-orange), 0 0 36px var(--color-rune-orange);
+    }
+}
+
+.pulse-purple {
+    animation: pulse-purple 1s infinite alternate;
+}
+
+@keyframes pulse-purple {
+    100% {
+        text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 50px var(--color-rune-purple);
+    }
+    0% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-purple), 0 0 26px var(--color-rune-purple), 0 0 36px var(--color-rune-purple);
+    }
+}
+
+.pulse-blue {
+    animation: pulse-blue 1s infinite alternate;
+}
+
+@keyframes pulse-blue {
+    100% {
+        text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 50px var(--color-rune-blue);
+    }
+    0% {
+        text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-blue), 0 0 26px var(--color-rune-blue), 0 0 36px var(--color-rune-blue);
+    }
+}
