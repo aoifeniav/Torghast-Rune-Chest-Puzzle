@@ -3,9 +3,8 @@ class Handle {
     changesCount;
     color;
 
-    constructor(unlockColor, changesCount) {
+    constructor(unlockColor) {
         this.unlockColor = unlockColor;
-        this.changesCount = changesCount;
     }
 
     isUnlocked() {
@@ -13,52 +12,46 @@ class Handle {
     }
 }
 
-
 /**
- * Initializes how many runes each handle changes & each handle's unlock color.
+ * Initialises 4 handles and sets each handle's unlock color, then shuffles and calls to setCountChanges.
  */
 function initHandles() {
     const handles = [];
 
-    // TODO: Need to randomize making sure they don't repeat each loop.
     for (let i = 0; i < 4; i++) {
-        const newHandle = new Handle(i, i + 1);
+        const newHandle = new Handle(i);
         handles.push(newHandle);
     }
 
-    console.log('initHandles ->', handles);
-    shuffleHandles(handles);
+    console.log('Handles all the way ->', handles);
+    setCountChanges(shuffleHandles(handles));
 }
 
 /**
- * Rearranges items in the handles array.
+ * Sets how many runes each handle changes, then shuffles and calls to setColors.
  * @param {Array} handles 
  */
-function shuffleHandles(handles) {
-    const shuffledHandles = handles
-      .map(value => ({ value, key: Math.random() }))
-      .sort((a, b) => a.key - b.key)
-      .map(({ value }) => value);
-
-    console.log('shuffleHandles ->', shuffledHandles);
-    setHandlesColors(shuffledHandles);
-}
-
-/**
- * Sets each handle initial color and calls to render function.
- * @param {Array} handles 
- */
-function setHandlesColors(handles) {
+ function setCountChanges(handles) {
     for (let i = 0; i < 4; i++) {
-        handles[i].color = i;
-
-        // Forces all handles to initialize as locked (color !== unlockColor).
-        if (handles[i].isUnlocked()) {
-            handles[i].color = (handles[i].color + 1) % 4;
-        }
+        handles[i].changesCount = i + 1;
     }
 
-    console.log('setHandlesColors ->', handles);
+    setColors(shuffleHandles(handles));
+}
+
+/**
+ * Sets each handle initial color, then calls to render function.
+ * @param {Array} handles 
+ */
+function setColors(handles) {
+    for (let handle of handles) {
+        handle.color = randomInteger(0, 3);
+
+        // Forces all handles to initialize as locked (color !== unlockColor).
+        if (handle.isUnlocked()) {
+            handle.color = (handle.color + 1) % 4;
+        }
+    }
 
     const handlesGroup = createHandleElements(handles);
     renderHandles(handlesGroup);
