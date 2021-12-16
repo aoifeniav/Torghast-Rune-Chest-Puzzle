@@ -40,19 +40,23 @@ function createHandleElements(handles) {
         let rune;
         switch (handle.color) {
             case 0:
-                rune = createElement('i', ['fa-ruler-vertical', 'fas']);
+                rune = createElement('span', ['rune', 'pulse-green']);
+                rune.innerText = '8';
                 handleElements.push(rune);
                 break;
             case 1:
-                rune = createElement('i', ['fa-ruler-horizontal', 'fas']);
+                rune = createElement('span', ['rune', 'pulse-orange']);
+                rune.innerText = 'N';
                 handleElements.push(rune);
                 break;
             case 2:
-                rune = createElement('i', ['fa-ruler-combined', 'fas']);
+                rune = createElement('span', ['rune', 'pulse-purple']);
+                rune.innerText = 'K';
                 handleElements.push(rune);
                 break;
             case 3:
-                rune = createElement('i', ['fa-ruler', 'fas']);
+                rune = createElement('span', ['rune', 'pulse-blue']);
+                rune.innerText = 'R';
                 handleElements.push(rune);
                 break;
         }
