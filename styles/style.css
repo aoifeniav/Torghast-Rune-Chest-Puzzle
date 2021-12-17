@@ -87,15 +87,15 @@ button:hover {
           animation: pulse-orange 1s infinite alternate;
 }
 
-.purple {
-  -webkit-animation: pulse-purple 1s infinite alternate;
-          animation: pulse-purple 1s infinite alternate;
-}
-
 .blue {
   margin-left: 30%;
   -webkit-animation: pulse-blue 1s infinite alternate;
           animation: pulse-blue 1s infinite alternate;
+}
+
+.purple {
+  -webkit-animation: pulse-purple 1s infinite alternate;
+          animation: pulse-purple 1s infinite alternate;
 }
 
 @-webkit-keyframes pulse-green {
@@ -131,22 +131,6 @@ button:hover {
     text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-orange), 0 0 8px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 16px var(--color-rune-orange), 0 0 32px var(--color-rune-orange);
   }
 }
-@-webkit-keyframes pulse-purple {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
-  }
-}
-@keyframes pulse-purple {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
-  }
-}
 @-webkit-keyframes pulse-blue {
   100% {
     text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 18px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 32px var(--color-rune-blue), 0 0 48px var(--color-rune-blue);
@@ -161,5 +145,21 @@ button:hover {
   }
   0% {
     text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-blue), 0 0 8px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 16px var(--color-rune-blue), 0 0 32px var(--color-rune-blue);
+  }
+}
+@-webkit-keyframes pulse-purple {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
+  }
+}
+@keyframes pulse-purple {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
   }
 }/*# sourceMappingURL=style.css.map */

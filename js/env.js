@@ -8,11 +8,11 @@ const RUNE_SETTINGS = {
         text: 'M'
     },
     2: {
-        color: 'purple',
-        text: 'F'
-    },
-    3: {
         color: 'blue',
         text: 'O'
+    },
+    3: {
+        color: 'purple',
+        text: 'F'
     },
 }

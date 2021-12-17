@@ -11,14 +11,15 @@
     animation: pulse-orange 1s infinite alternate;
 }
 
-.purple {
-    animation: pulse-purple 1s infinite alternate;
-}
-
 .blue {
     margin-left: 30%;
     animation: pulse-blue 1s infinite alternate;
 }
+
+.purple {
+    animation: pulse-purple 1s infinite alternate;
+}
+
 
 @function ending-shadow($rune-color) {
     @return (
@@ -63,20 +64,20 @@
     }
 }
 
-@keyframes pulse-purple {
-    100% {
-        text-shadow: ending-shadow("rune-purple");
-    }
-    0% {
-        text-shadow: starting-shadow("rune-purple");
-    }
-}
-
 @keyframes pulse-blue {
     100% {
         text-shadow: ending-shadow("rune-blue");
     }
     0% {
         text-shadow: starting-shadow("rune-blue");
+    }
+}
+
+@keyframes pulse-purple {
+    100% {
+        text-shadow: ending-shadow("rune-purple");
+    }
+    0% {
+        text-shadow: starting-shadow("rune-purple");
     }
 }
