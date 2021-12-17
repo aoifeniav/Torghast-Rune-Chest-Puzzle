@@ -1,15 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
 :root {
   --color-primary: #d0ddd7;
   --color-secondary: #4a589e;
   --color-bg: #3f4045;
-  --color-rune-green: #affc41;
-  --color-rune-orange: #ff9f1c;
-  --color-rune-purple: #bd8bff;
+  --color-rune-green: #93fc00;
+  --color-rune-orange: #ff7b00;
+  --color-rune-purple: #bb46ff;
   --color-rune-blue: #00bbf9;
 }
 
+@font-face {
+  font-family: "Rune";
+  src: url("./fonts/rune/rune.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   background-color: var(--color-bg);
   color: var(--color-primary);
@@ -30,48 +35,25 @@ main {
   width: 100%;
   margin: 15px 0;
   font-size: xxx-large;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .handle-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .handle-container :first-child {
   margin-bottom: 40px;
 }
-
 .handle-container :last-child {
   margin-top: 20px;
 }
-
 .handle-container :last-child:hover {
   cursor: pointer;
-}
-
-.rune {
-  color: #ffffff;
-  font-family: "Grand Hotel", sans-serif;
 }
 
 button {
@@ -82,7 +64,6 @@ button {
   color: inherit;
   border-style: none;
 }
-
 button:hover {
   cursor: pointer;
 }
@@ -91,95 +72,94 @@ button:hover {
   margin-top: 100px;
 }
 
+.rune {
+  color: #ffffff;
+  font-family: "Rune", sans-serif;
+}
+
 .green {
-  -webkit-animation: green 1s infinite alternate;
-          animation: green 1s infinite alternate;
-}
-
-@-webkit-keyframes green {
-  100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 50px var(--color-rune-green);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-green), 0 0 26px var(--color-rune-green), 0 0 36px var(--color-rune-green);
-  }
-}
-
-@keyframes green {
-  100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 50px var(--color-rune-green);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-green), 0 0 26px var(--color-rune-green), 0 0 36px var(--color-rune-green);
-  }
+  -webkit-animation: pulse-green 1s infinite alternate;
+          animation: pulse-green 1s infinite alternate;
 }
 
 .orange {
-  -webkit-animation: orange 1s infinite alternate;
-          animation: orange 1s infinite alternate;
-}
-
-@-webkit-keyframes orange {
-  100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 50px var(--color-rune-orange);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-orange), 0 0 26px var(--color-rune-orange), 0 0 36px var(--color-rune-orange);
-  }
-}
-
-@keyframes orange {
-  100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 50px var(--color-rune-orange);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-orange), 0 0 26px var(--color-rune-orange), 0 0 36px var(--color-rune-orange);
-  }
+  -webkit-animation: pulse-orange 1s infinite alternate;
+          animation: pulse-orange 1s infinite alternate;
 }
 
 .purple {
-  -webkit-animation: purple 1s infinite alternate;
-          animation: purple 1s infinite alternate;
-}
-
-@-webkit-keyframes purple {
-  100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 50px var(--color-rune-purple);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-purple), 0 0 26px var(--color-rune-purple), 0 0 36px var(--color-rune-purple);
-  }
-}
-
-@keyframes purple {
-  100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 50px var(--color-rune-purple);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-purple), 0 0 26px var(--color-rune-purple), 0 0 36px var(--color-rune-purple);
-  }
+  -webkit-animation: pulse-purple 1s infinite alternate;
+          animation: pulse-purple 1s infinite alternate;
 }
 
 .blue {
-  -webkit-animation: blue 1s infinite alternate;
-          animation: blue 1s infinite alternate;
+  margin-left: 30%;
+  -webkit-animation: pulse-blue 1s infinite alternate;
+          animation: pulse-blue 1s infinite alternate;
 }
 
-@-webkit-keyframes blue {
+@-webkit-keyframes pulse-green {
   100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 50px var(--color-rune-blue);
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 18px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 32px var(--color-rune-green), 0 0 48px var(--color-rune-green);
   }
   0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-blue), 0 0 26px var(--color-rune-blue), 0 0 36px var(--color-rune-blue);
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-green), 0 0 8px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 16px var(--color-rune-green), 0 0 32px var(--color-rune-green);
   }
 }
 
-@keyframes blue {
+@keyframes pulse-green {
   100% {
-    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 12px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 50px var(--color-rune-blue);
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 18px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 32px var(--color-rune-green), 0 0 48px var(--color-rune-green);
   }
   0% {
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 6px var(--color-rune-blue), 0 0 26px var(--color-rune-blue), 0 0 36px var(--color-rune-blue);
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-green), 0 0 8px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 16px var(--color-rune-green), 0 0 32px var(--color-rune-green);
   }
 }
-/*# sourceMappingURL=style.css.map */
+@-webkit-keyframes pulse-orange {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 18px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 32px var(--color-rune-orange), 0 0 48px var(--color-rune-orange);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-orange), 0 0 8px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 16px var(--color-rune-orange), 0 0 32px var(--color-rune-orange);
+  }
+}
+@keyframes pulse-orange {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 18px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 32px var(--color-rune-orange), 0 0 48px var(--color-rune-orange);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-orange), 0 0 8px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 16px var(--color-rune-orange), 0 0 32px var(--color-rune-orange);
+  }
+}
+@-webkit-keyframes pulse-purple {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
+  }
+}
+@keyframes pulse-purple {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
+  }
+}
+@-webkit-keyframes pulse-blue {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 18px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 32px var(--color-rune-blue), 0 0 48px var(--color-rune-blue);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-blue), 0 0 8px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 16px var(--color-rune-blue), 0 0 32px var(--color-rune-blue);
+  }
+}
+@keyframes pulse-blue {
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 18px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 32px var(--color-rune-blue), 0 0 48px var(--color-rune-blue);
+  }
+  0% {
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-blue), 0 0 8px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 16px var(--color-rune-blue), 0 0 32px var(--color-rune-blue);
+  }
+}/*# sourceMappingURL=style.css.map */

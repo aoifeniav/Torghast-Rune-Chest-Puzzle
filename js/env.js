@@ -1,18 +1,18 @@
 const RUNE_SETTINGS = {
     0: {
         color: 'green',
-        text: '8'
+        text: 'B'
     },
     1: {
         color: 'orange',
-        text: 'N'
+        text: 'M'
     },
     2: {
         color: 'purple',
-        text: 'K'
+        text: 'F'
     },
     3: {
         color: 'blue',
-        text: 'R'
+        text: 'O'
     },
 }

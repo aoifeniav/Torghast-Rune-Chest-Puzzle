@@ -43,11 +43,6 @@ main {
     }
 }
 
-.rune {
-    color: #ffffff;
-    font-family: "Grand Hotel", sans-serif;
-}
-
 button {
     font-family: inherit;
     font-size: 100%;
@@ -62,4 +57,4 @@ button {
     margin-top: 100px;
 }
 
-@import "neon";
+@import "runes";
