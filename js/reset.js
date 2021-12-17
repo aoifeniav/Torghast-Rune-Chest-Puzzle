@@ -14,5 +14,6 @@
 function resetPuzzle() {
     const container = document.getElementById('chest');
     container.innerHTML = '';
+    isFinished = false;
     initHandles();
 }

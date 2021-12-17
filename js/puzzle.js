@@ -4,6 +4,10 @@
  * @param {Array} handles
  */
 function activatePuzzle(clickedSkullChangesCount, handles) {
+    if (isFinished) {
+        return
+    }
+
     for (let handle of handles) {
         if (clickedSkullChangesCount <= handle.changesCount) {
             handle.color = (++handle.color) % 4;
@@ -11,6 +15,10 @@ function activatePuzzle(clickedSkullChangesCount, handles) {
 
         changeRune(handle);
         changeChain(handle);
+    }
+
+    if (checkUnlocked(handles)) {
+        finishGame();
     }
 }
 
@@ -22,10 +30,11 @@ function changeRune(handle) {
     const rune = document.getElementById(`rune_${handle.unlockColor}`);
     rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`;
     rune.innerText = RUNE_SETTINGS[handle.color].text;
+    rune.setAttribute('data-color', RUNE_SETTINGS[handle.color].color);
 }
 
 /**
- * Changes the chain depending on handle.isUnlocked.
+ * Changes the chain if the handle isUnlocked.
  * @param {Object} handle 
  */
 function changeChain(handle) {
@@ -37,4 +46,24 @@ function changeChain(handle) {
         chain.classList.remove('fa-unlink');
         chain.classList.add('fa-link');
     }
+}
+
+/**
+ * Checks each handle to see if it is unlocked.
+ * @param {Array} handles 
+ * @returns true if all handles are unlocked; false otherwise.
+ */
+function checkUnlocked(handles) {
+    const unlockedHandles = [];
+    for (let handle of handles) {
+        let isUnlocked = handle.isUnlocked() ? true : false;
+        unlockedHandles.push(isUnlocked);
+    }
+    const isAllUnlocked = unlockedHandles.every(unlocked => unlocked === true);
+
+    return isAllUnlocked;
+}
+
+function finishGame() {
+    isFinished = true;
 }

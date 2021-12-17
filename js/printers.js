@@ -45,14 +45,16 @@ function createChain(handle) {
  */
 function createRune(handle) {
     const rune = createElement('span');
-    rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`;
+    // rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`; 
+    rune.classList = 'rune'; 
     rune.innerText = RUNE_SETTINGS[handle.color].text;
     rune.setAttribute('id', `rune_${handle.unlockColor}`);
+    rune.setAttribute('data-color', RUNE_SETTINGS[handle.color].color);
     return rune;
 }
 
 /**
- * Creates skull icon and adds an event listener to each skull that will change runes (on click) according to the skull's changesCount.
+ * Creates skull icon and adds an event listener that will change runes (on click) according to the skull's changesCount.
  * @param {Object} handle 
  * @param {Array} handles 
  * @returns skull HTML element.
@@ -62,7 +64,6 @@ function createRune(handle) {
     skull.addEventListener('click', function () {
         activatePuzzle(handle.changesCount, handles);
     });
-
     return skull;
 }
 
