@@ -3,15 +3,31 @@
   --color-primary: #d0ddd7;
   --color-secondary: #4a589e;
   --color-bg: #3f4045;
-  --color-rune-green: #93fc00;
-  --color-rune-orange: #ff7b00;
-  --color-rune-purple: #bb46ff;
-  --color-rune-blue: #00bbf9;
+}
+
+[data-color=green] {
+  --color-rune: #93fc00;
+}
+
+[data-color=orange] {
+  --color-rune: #ff7b00;
+}
+
+[data-color=blue] {
+  --color-rune: #00bbf9;
+}
+
+[data-color=purple] {
+  --color-rune: #bb46ff;
+}
+
+[data-color=button] {
+  --color-rune: #4a589e;
 }
 
 @font-face {
   font-family: "Rune";
-  src: url("./fonts/rune/rune.ttf");
+  src: url("./fonts/tolkien_dwarf_runes/dwarf.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -73,93 +89,35 @@ button:hover {
 }
 
 .rune {
-  color: #ffffff;
   font-family: "Rune", sans-serif;
+  font-size: xx-large;
+  color: #ffffff;
+  height: 50px;
+  width: 55px;
+  padding-top: 15px;
+  border-radius: 100%;
+  -webkit-animation: pulse 1s infinite alternate;
+          animation: pulse 1s infinite alternate;
 }
 
-.green {
-  -webkit-animation: pulse-green 1s infinite alternate;
-          animation: pulse-green 1s infinite alternate;
-}
-
-.orange {
-  -webkit-animation: pulse-orange 1s infinite alternate;
-          animation: pulse-orange 1s infinite alternate;
-}
-
-.blue {
-  margin-left: 30%;
-  -webkit-animation: pulse-blue 1s infinite alternate;
-          animation: pulse-blue 1s infinite alternate;
-}
-
-.purple {
-  -webkit-animation: pulse-purple 1s infinite alternate;
-          animation: pulse-purple 1s infinite alternate;
-}
-
-@-webkit-keyframes pulse-green {
+@-webkit-keyframes pulse {
   100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 18px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 32px var(--color-rune-green), 0 0 48px var(--color-rune-green);
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune), 0 0 12px var(--color-rune), 0 0 18px var(--color-rune), 0 0 24px var(--color-rune), 0 0 32px var(--color-rune), 0 0 48px var(--color-rune);
+    box-shadow: 0 0 12px var(--color-rune);
   }
   0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-green), 0 0 8px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 16px var(--color-rune-green), 0 0 32px var(--color-rune-green);
+    text-shadow: 0 0 4px var(--color-rune), 0 0 8px var(--color-rune), 0 0 12px var(--color-rune), 0 0 16px var(--color-rune), 0 0 32px var(--color-rune);
+    box-shadow: 0 0 4px var(--color-rune);
   }
 }
 
-@keyframes pulse-green {
+@keyframes pulse {
   100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 18px var(--color-rune-green), 0 0 24px var(--color-rune-green), 0 0 32px var(--color-rune-green), 0 0 48px var(--color-rune-green);
+    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune), 0 0 12px var(--color-rune), 0 0 18px var(--color-rune), 0 0 24px var(--color-rune), 0 0 32px var(--color-rune), 0 0 48px var(--color-rune);
+    box-shadow: 0 0 12px var(--color-rune);
   }
   0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-green), 0 0 8px var(--color-rune-green), 0 0 12px var(--color-rune-green), 0 0 16px var(--color-rune-green), 0 0 32px var(--color-rune-green);
-  }
-}
-@-webkit-keyframes pulse-orange {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 18px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 32px var(--color-rune-orange), 0 0 48px var(--color-rune-orange);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-orange), 0 0 8px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 16px var(--color-rune-orange), 0 0 32px var(--color-rune-orange);
-  }
-}
-@keyframes pulse-orange {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 18px var(--color-rune-orange), 0 0 24px var(--color-rune-orange), 0 0 32px var(--color-rune-orange), 0 0 48px var(--color-rune-orange);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-orange), 0 0 8px var(--color-rune-orange), 0 0 12px var(--color-rune-orange), 0 0 16px var(--color-rune-orange), 0 0 32px var(--color-rune-orange);
-  }
-}
-@-webkit-keyframes pulse-blue {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 18px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 32px var(--color-rune-blue), 0 0 48px var(--color-rune-blue);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-blue), 0 0 8px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 16px var(--color-rune-blue), 0 0 32px var(--color-rune-blue);
-  }
-}
-@keyframes pulse-blue {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 18px var(--color-rune-blue), 0 0 24px var(--color-rune-blue), 0 0 32px var(--color-rune-blue), 0 0 48px var(--color-rune-blue);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-blue), 0 0 8px var(--color-rune-blue), 0 0 12px var(--color-rune-blue), 0 0 16px var(--color-rune-blue), 0 0 32px var(--color-rune-blue);
-  }
-}
-@-webkit-keyframes pulse-purple {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
-  }
-}
-@keyframes pulse-purple {
-  100% {
-    text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 18px var(--color-rune-purple), 0 0 24px var(--color-rune-purple), 0 0 32px var(--color-rune-purple), 0 0 48px var(--color-rune-purple);
-  }
-  0% {
-    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune-purple), 0 0 8px var(--color-rune-purple), 0 0 12px var(--color-rune-purple), 0 0 16px var(--color-rune-purple), 0 0 32px var(--color-rune-purple);
+    text-shadow: 0 0 4px var(--color-rune), 0 0 8px var(--color-rune), 0 0 12px var(--color-rune), 0 0 16px var(--color-rune), 0 0 32px var(--color-rune);
+    box-shadow: 0 0 4px var(--color-rune);
   }
 }/*# sourceMappingURL=style.css.map */

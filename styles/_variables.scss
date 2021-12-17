@@ -2,8 +2,24 @@
     --color-primary: #d0ddd7;
     --color-secondary: #4a589e;
     --color-bg: #3f4045;
-    --color-rune-green: #93fc00;
-    --color-rune-orange: #ff7b00;
-    --color-rune-purple: #bb46ff;
-    --color-rune-blue: #00bbf9;
+}
+
+[data-color="green"] {
+    --color-rune: #93fc00;
+}
+
+[data-color="orange"] {
+    --color-rune: #ff7b00;
+}
+
+[data-color="blue"] {
+    --color-rune: #00bbf9;
+}
+
+[data-color="purple"] {
+    --color-rune: #bb46ff;
+}
+
+[data-color="button"] {
+    --color-rune: #4a589e;
 }
