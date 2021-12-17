@@ -1,19 +1,4 @@
 /**
- * Creates skull icon and adds an event listener to each skull that will change runes (on click) according to the skull's changesCount.
- * @param {Object} handle 
- * @param {Array} handles 
- * @returns skull HTML element.
- */
- function createSkull(handle, handles) {
-    const skull = createElement('i', ['fa-skull', 'fas']);
-    skull.addEventListener('click', function () {
-        activatePuzzle(handle.changesCount, handles);
-    });
-
-    return skull;
-}
-
-/**
  * Changes the runes according to the clicked skull's changesCount and then changes the chains.
  * @param {number} clickedSkullChangesCount 
  * @param {Array} handles

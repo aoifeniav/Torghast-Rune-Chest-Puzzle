@@ -1,17 +1,8 @@
-function renderHandles(handlesGroup) {
-    const container = document.getElementById('chest');
-
-    for (const group of handlesGroup) {
-        const groupContainer = createElement('div', ['handle-container']);
-
-        for (const handle of group) {
-            groupContainer.appendChild(handle);
-        }
-
-        container.appendChild(groupContainer);
-    }
-}
-
+/**
+ * Creates 4 groups of handles, each with its chain, rune and skull.
+ * @param {Array} handles 
+ * @returns array with all 4 handles.
+ */
 function createHandleElements(handles) {
     const handlesGroup = [];
 
@@ -58,4 +49,37 @@ function createRune(handle) {
     rune.innerText = RUNE_SETTINGS[handle.color].text;
     rune.setAttribute('id', `rune_${handle.unlockColor}`);
     return rune;
+}
+
+/**
+ * Creates skull icon and adds an event listener to each skull that will change runes (on click) according to the skull's changesCount.
+ * @param {Object} handle 
+ * @param {Array} handles 
+ * @returns skull HTML element.
+ */
+ function createSkull(handle, handles) {
+    const skull = createElement('i', ['fa-skull', 'fas']);
+    skull.addEventListener('click', function () {
+        activatePuzzle(handle.changesCount, handles);
+    });
+
+    return skull;
+}
+
+/**
+ * Renders all 4 handles.
+ * @param {Array} handlesGroup 
+ */
+function renderHandles(handlesGroup) {
+    const container = document.getElementById('chest');
+
+    for (const group of handlesGroup) {
+        const groupContainer = createElement('div', ['handle-container']);
+
+        for (const handle of group) {
+            groupContainer.appendChild(handle);
+        }
+
+        container.appendChild(groupContainer);
+    }
 }
