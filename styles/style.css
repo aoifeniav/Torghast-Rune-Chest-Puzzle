@@ -96,28 +96,28 @@ button:hover {
   width: 55px;
   padding-top: 15px;
   border-radius: 100%;
-  -webkit-animation: pulse 1s infinite alternate;
-          animation: pulse 1s infinite alternate;
+  -webkit-animation: pulse 0.5s infinite alternate;
+          animation: pulse 0.5s infinite alternate;
 }
 
 @-webkit-keyframes pulse {
   100% {
     text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune), 0 0 12px var(--color-rune), 0 0 18px var(--color-rune), 0 0 24px var(--color-rune), 0 0 32px var(--color-rune), 0 0 48px var(--color-rune);
-    box-shadow: 0 0 12px var(--color-rune);
+    box-shadow: 0 0 8px var(--color-rune);
   }
   0% {
-    text-shadow: 0 0 4px var(--color-rune), 0 0 8px var(--color-rune), 0 0 12px var(--color-rune), 0 0 16px var(--color-rune), 0 0 32px var(--color-rune);
-    box-shadow: 0 0 4px var(--color-rune);
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune), 0 0 8px var(--color-rune), 0 0 12px var(--color-rune), 0 0 16px var(--color-rune), 0 0 32px var(--color-rune);
+    box-shadow: 0 0 2px var(--color-rune);
   }
 }
 
 @keyframes pulse {
   100% {
     text-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-rune), 0 0 12px var(--color-rune), 0 0 18px var(--color-rune), 0 0 24px var(--color-rune), 0 0 32px var(--color-rune), 0 0 48px var(--color-rune);
-    box-shadow: 0 0 12px var(--color-rune);
+    box-shadow: 0 0 8px var(--color-rune);
   }
   0% {
-    text-shadow: 0 0 4px var(--color-rune), 0 0 8px var(--color-rune), 0 0 12px var(--color-rune), 0 0 16px var(--color-rune), 0 0 32px var(--color-rune);
-    box-shadow: 0 0 4px var(--color-rune);
+    text-shadow: 0 0 1px #fff, 0 0 4px var(--color-rune), 0 0 8px var(--color-rune), 0 0 12px var(--color-rune), 0 0 16px var(--color-rune), 0 0 32px var(--color-rune);
+    box-shadow: 0 0 2px var(--color-rune);
   }
 }/*# sourceMappingURL=style.css.map */

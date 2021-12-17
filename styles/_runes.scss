@@ -6,7 +6,7 @@
     width: 55px;
     padding-top: 15px;
     border-radius: 100%;
-    animation: pulse 1s infinite alternate;
+    animation: pulse 0.5s infinite alternate;
 }
 
 @function ending-shadow-text() {
@@ -24,6 +24,7 @@
 
 @function starting-shadow-text() {
     @return (
+        0 0 1px #fff,
         0 0 4px var(--color-rune),
         0 0 8px var(--color-rune),
         0 0 12px var(--color-rune),
@@ -34,13 +35,13 @@
 
 @function ending-shadow-box() {
     @return (
-        0 0 12px var(--color-rune)
+        0 0 8px var(--color-rune)
     );
 }
 
 @function starting-shadow-box() {
     @return (
-        0 0 4px var(--color-rune)
+        0 0 2px var(--color-rune)
     );
 }
 
