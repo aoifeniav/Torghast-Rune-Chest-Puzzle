@@ -18,7 +18,7 @@ function activatePuzzle(clickedSkullChangesCount, handles) {
     }
 
     if (checkUnlocked(handles)) {
-        finishGame();
+        isFinished = true;
     }
 }
 
@@ -54,16 +54,10 @@ function changeChain(handle) {
  * @returns true if all handles are unlocked; false otherwise.
  */
 function checkUnlocked(handles) {
-    const unlockedHandles = [];
     for (let handle of handles) {
-        let isUnlocked = handle.isUnlocked() ? true : false;
-        unlockedHandles.push(isUnlocked);
+        if (!handle.isUnlocked()) {
+            return false;
+        }
     }
-    const isAllUnlocked = unlockedHandles.every(unlocked => unlocked === true);
-
-    return isAllUnlocked;
-}
-
-function finishGame() {
-    isFinished = true;
+    return true;
 }
