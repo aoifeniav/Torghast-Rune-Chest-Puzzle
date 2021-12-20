@@ -32,7 +32,10 @@ function createChain(handle) {
     if (handle.isUnlocked()) {
         chain = createElement('i', ['fa-unlink', 'fas']);
     } else {
-        chain = createElement('i', ['fa-link', 'fas']);
+        chain = createElement('i', ['fa-link', 'fas', 'locked-chain']);
+        setTimeout(() => {
+            chain.classList.remove('locked-chain');
+        }, 500);
     }
     chain.setAttribute('id', `chain_${handle.unlockColor}`);
     return chain;

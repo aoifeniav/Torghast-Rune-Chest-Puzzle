@@ -44,7 +44,10 @@ function changeChain(handle) {
         chain.classList.add('fa-unlink');
     } else {
         chain.classList.remove('fa-unlink');
-        chain.classList.add('fa-link');
+        chain.classList.add('fa-link', 'locked-chain');
+        setTimeout(() => {
+            chain.classList.remove('locked-chain');
+        }, 500);
     }
 }
 

@@ -73,6 +73,9 @@ main {
 
 .fa-link {
   color: var(--color-locked);
+}
+
+.locked-chain {
   -webkit-animation: chain-wobble 0.6s both;
           animation: chain-wobble 0.6s both;
 }
