@@ -1,7 +1,7 @@
 /**
  * Adds an event listener to reset button to reset the puzzle.
  */
- function resetButtonListener() {
+function resetButtonListener() {
     const resetButton = document.getElementById('reset');
     resetButton.addEventListener('click', function () {
         resetPuzzle();
@@ -24,7 +24,5 @@ function resetPuzzle() {
  * @param {Object} resetButton 
  */
 function removeResetButtonPulse(resetButton) {
-    if (resetButton.classList.contains('button-pulse')) {
-        resetButton.classList.remove('button-pulse');
-    }
+    resetButton.classList.remove('button-pulse');
 }

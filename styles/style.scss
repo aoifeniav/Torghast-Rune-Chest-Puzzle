@@ -39,8 +39,11 @@ main {
 
     :last-child {
         margin-top: 20px;
-        @include pointer;
     }
+}
+
+.pointer {
+    cursor: pointer;
 }
 
 @import "runes";

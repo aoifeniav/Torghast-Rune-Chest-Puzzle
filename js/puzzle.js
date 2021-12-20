@@ -69,4 +69,13 @@ function finishGame() {
     isFinished = true;
     const resetButton = document.getElementById('reset');
     resetButton.classList.add('button-pulse');
+    removeSkullsPointer();
+}
+
+function removeSkullsPointer() {
+    const skulls = document.querySelectorAll('.fa-skull');
+    console.log(skulls);
+    for (let skull of skulls) {
+        skull.classList.remove('pointer');
+    }
 }

@@ -64,7 +64,8 @@ main {
 .handle-container :last-child {
   margin-top: 20px;
 }
-.handle-container :last-child:hover {
+
+.pointer {
   cursor: pointer;
 }
 
