@@ -1,0 +1,10 @@
+.fa-skull {
+    scale: 0.9;
+    transition: scale 0.1s;
+
+    &:hover {
+        transition: scale 0.1s;
+        scale: 1;
+    }
+}
+

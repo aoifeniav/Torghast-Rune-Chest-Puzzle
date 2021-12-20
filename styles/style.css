@@ -53,7 +53,6 @@ header {
 
 main {
   margin: 0 auto;
-  width: 1024px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +78,7 @@ main {
   margin-bottom: 40px;
 }
 .handle-container :last-child {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 #instructions {
@@ -244,6 +243,15 @@ main {
     box-shadow: 0 0 3px var(--color-rune), 0 0 4px var(--color-rune), 0 0 6px var(--color-rune);
   }
 }
+.fa-skull {
+  scale: 0.9;
+  transition: scale 0.1s;
+}
+.fa-skull:hover {
+  transition: scale 0.1s;
+  scale: 1;
+}
+
 button {
   font-family: inherit;
   font-size: 100%;

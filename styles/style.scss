@@ -28,7 +28,6 @@ header {
 
 main {
     margin: 0 auto;
-    width: 1024px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +54,7 @@ main {
     }
 
     :last-child {
-        margin-top: 20px;
+        margin-top: 25px;
     }
 }
 
@@ -70,4 +69,5 @@ main {
 
 @import "chains";
 @import "runes";
+@import "skulls";
 @import "button";
