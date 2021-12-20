@@ -75,7 +75,7 @@ main {
   color: var(--color-locked);
 }
 
-.locked-chain {
+.locked-animation {
   -webkit-animation: chain-wobble 0.6s both;
           animation: chain-wobble 0.6s both;
 }
@@ -85,6 +85,11 @@ main {
   text-shadow: 0 0 2px var(--color-unlocked), 0 0 4px var(--color-unlocked), 0 0 6px var(--color-unlocked);
   -webkit-animation: puff-in-center 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
           animation: puff-in-center 0.3s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+.unlocked-animation {
+  -webkit-animation: chain-pulse 0.5s ease-in-out infinite both;
+          animation: chain-pulse 0.5s ease-in-out infinite both;
 }
 
 @-webkit-keyframes chain-wobble {
@@ -162,6 +167,28 @@ main {
     transform: scale(1);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+@-webkit-keyframes chain-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes chain-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 .rune {

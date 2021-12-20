@@ -44,9 +44,9 @@ function changeChain(handle) {
         chain.classList.add('fa-unlink');
     } else {
         chain.classList.remove('fa-unlink');
-        chain.classList.add('fa-link', 'locked-chain');
+        chain.classList.add('fa-link', 'locked-animation');
         setTimeout(() => {
-            chain.classList.remove('locked-chain');
+            chain.classList.remove('locked-animation');
         }, 500);
     }
 }
@@ -66,13 +66,31 @@ function checkUnlocked(handles) {
 }
 
 /**
- * Toggles isFinished variable to true and adds pulse class to reset button.
+ * Toggles isFinished variable to true, adds pulse animation to skulls and reset button, and removes cursor pointer from skulls.
  */
 function finishGame() {
     isFinished = true;
+    pulseUnlockedChains();
+    pulseResetButton();
+    removeSkullsPointer();
+}
+
+/**
+ * Makes all unlocked chains pulse.
+ */
+function pulseUnlockedChains() {
+    const chains = document.querySelectorAll('.fa-unlink');
+    for (let chain of chains) {
+        chain.classList.add('unlocked-animation');
+    }
+}
+
+/**
+ * Makes the reset button pulse.
+ */
+function pulseResetButton() {
     const resetButton = document.getElementById('reset');
     resetButton.classList.add('button-pulse');
-    removeSkullsPointer();
 }
 
 /**
@@ -80,7 +98,6 @@ function finishGame() {
  */
 function removeSkullsPointer() {
     const skulls = document.querySelectorAll('.fa-skull');
-    console.log(skulls);
     for (let skull of skulls) {
         skull.classList.remove('pointer');
     }
