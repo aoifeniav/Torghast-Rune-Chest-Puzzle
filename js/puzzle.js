@@ -72,6 +72,9 @@ function finishGame() {
     removeSkullsPointer();
 }
 
+/**
+ * Removes cursor pointer class from skull icons.
+ */
 function removeSkullsPointer() {
     const skulls = document.querySelectorAll('.fa-skull');
     console.log(skulls);
