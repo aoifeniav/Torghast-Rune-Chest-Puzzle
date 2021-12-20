@@ -43,18 +43,5 @@ main {
     }
 }
 
-button {
-    font-family: inherit;
-    font-size: 100%;
-    padding: 10px;
-    background-color: var(--color-secondary);
-    color: inherit;
-    border-style: none;
-    @include pointer;
-}
-
-#reset {
-    margin-top: 100px;
-}
-
 @import "runes";
+@import "button";

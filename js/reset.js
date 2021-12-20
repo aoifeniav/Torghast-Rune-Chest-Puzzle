@@ -5,6 +5,7 @@
     const resetButton = document.getElementById('reset');
     resetButton.addEventListener('click', function () {
         resetPuzzle();
+        removeResetButtonPulse(resetButton);
     });
 }
 
@@ -16,4 +17,14 @@ function resetPuzzle() {
     container.innerHTML = '';
     isFinished = false;
     initHandles();
+}
+
+/**
+ * Removes pulse class from reset button.
+ * @param {Object} resetButton 
+ */
+function removeResetButtonPulse(resetButton) {
+    if (resetButton.classList.contains('button-pulse')) {
+        resetButton.classList.remove('button-pulse');
+    }
 }

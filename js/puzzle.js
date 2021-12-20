@@ -18,7 +18,7 @@ function activatePuzzle(clickedSkullChangesCount, handles) {
     }
 
     if (checkUnlocked(handles)) {
-        isFinished = true;
+        finishGame();
     }
 }
 
@@ -60,4 +60,13 @@ function checkUnlocked(handles) {
         }
     }
     return true;
+}
+
+/**
+ * Toggles isFinished variable to true and adds pulse class to reset button.
+ */
+function finishGame() {
+    isFinished = true;
+    const resetButton = document.getElementById('reset');
+    resetButton.classList.add('button-pulse');
 }

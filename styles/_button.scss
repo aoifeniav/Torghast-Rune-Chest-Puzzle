@@ -1,0 +1,29 @@
+button {
+    font-family: inherit;
+    font-size: 100%;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    color: inherit;
+    border-style: none;
+    @include pointer;
+}
+
+#reset {
+    margin-top: 100px;
+}
+
+.button-pulse {
+    animation: button-pulse 1s infinite alternate;
+}
+
+@keyframes button-pulse {
+    100% {
+        box-shadow: 0 0 2px #fff, 0 0 3px #fff, 0 0 6px var(--color-secondary), 0 0 12px var(--color-secondary),
+            0 0 18px var(--color-secondary), 0 0 24px var(--color-secondary), 0 0 32px var(--color-secondary),
+            0 0 48px var(--color-secondary);
+    }
+    0% {
+        box-shadow: 0 0 1px #fff, 0 0 4px var(--color-secondary), 0 0 8px var(--color-secondary),
+            0 0 12px var(--color-secondary), 0 0 16px var(--color-secondary), 0 0 32px var(--color-secondary);
+    }
+}

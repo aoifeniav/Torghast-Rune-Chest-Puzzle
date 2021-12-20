@@ -6,7 +6,7 @@
     width: 55px;
     padding-top: 15px;
     border-radius: 100%;
-    animation: pulse 0.5s infinite alternate;
+    animation: rune-pulse 0.5s infinite alternate;
 }
 
 @function ending-shadow-text() {
@@ -45,7 +45,7 @@
     );
 }
 
-@keyframes pulse {
+@keyframes rune-pulse {
     100% {
         text-shadow: ending-shadow-text();
         box-shadow: ending-shadow-box();
