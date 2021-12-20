@@ -1,6 +1,6 @@
 .rune {
     font-family: "Rune", sans-serif;
-    font-size: xx-large;
+    font-size: 36px;
     color: #ffffff;
     height: 50px;
     width: 55px;
@@ -9,10 +9,21 @@
     animation: rune-pulse 0.5s infinite alternate;
 }
 
-@function ending-shadow-text() {
+@function starting-shadow-text() {
     @return (
         0 0 2px #fff,
+        0 0 4px var(--color-rune),
+        0 0 8px var(--color-rune),
+        0 0 12px var(--color-rune),
+        0 0 16px var(--color-rune),
+        0 0 32px var(--color-rune)
+    );
+}
+
+@function ending-shadow-text() {
+    @return (
         0 0 3px #fff,
+        0 0 4px #fff,
         0 0 6px var(--color-rune),
         0 0 12px var(--color-rune),
         0 0 18px var(--color-rune),
@@ -22,36 +33,20 @@
     );
 }
 
-@function starting-shadow-text() {
-    @return (
-        0 0 1px #fff,
-        0 0 4px var(--color-rune),
-        0 0 8px var(--color-rune),
-        0 0 12px var(--color-rune),
-        0 0 16px var(--color-rune),
-        0 0 32px var(--color-rune)
-    );
-}
-
-@function ending-shadow-box() {
-    @return (
-        0 0 8px var(--color-rune)
-    );
-}
-
 @function starting-shadow-box() {
-    @return (
-        0 0 2px var(--color-rune)
-    );
+    @return (0 0 1px var(--color-rune), 0 0 3px var(--color-rune));
+}
+@function ending-shadow-box() {
+    @return (0 0 3px var(--color-rune), 0 0 4px var(--color-rune), 0 0 6px var(--color-rune));
 }
 
 @keyframes rune-pulse {
-    100% {
-        text-shadow: ending-shadow-text();
-        box-shadow: ending-shadow-box();
-    }
     0% {
         text-shadow: starting-shadow-text();
         box-shadow: starting-shadow-box();
+    }
+    100% {
+        text-shadow: ending-shadow-text();
+        box-shadow: ending-shadow-box();
     }
 }
