@@ -3,6 +3,7 @@ button {
     font-size: 100%;
     padding: 10px 14px;
     background-color: var(--color-secondary);
+    box-shadow: 0 2px 10px var(--color-bg-secondary);
     color: inherit;
     border-style: none;
     @include pointer;
@@ -23,7 +24,6 @@ button {
     }
     100% {
         box-shadow: 
-        // 0 0 3px #fff,
         0 0 6px #fff,
         0 0 6px #fff,
         0 0 14px var(--color-secondary),

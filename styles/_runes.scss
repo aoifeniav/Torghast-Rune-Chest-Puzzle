@@ -36,6 +36,7 @@
 @function starting-shadow-box() {
     @return (0 0 1px var(--color-rune), 0 0 3px var(--color-rune));
 }
+
 @function ending-shadow-box() {
     @return (0 0 3px var(--color-rune), 0 0 4px var(--color-rune), 0 0 6px var(--color-rune));
 }
