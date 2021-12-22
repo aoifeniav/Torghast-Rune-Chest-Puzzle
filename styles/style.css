@@ -48,12 +48,13 @@ body {
 
 header {
   padding: 10px;
-  text-align: center;
   border-bottom: 1px solid var(--color-bg-secondary);
 }
 
-h1 {
+h1,
+h2 {
   margin: 0;
+  text-align: center;
   font-size: 1em;
   font-weight: normal;
   letter-spacing: 2px;
@@ -66,17 +67,29 @@ main {
   align-items: center;
 }
 
-#instructions {
+.text-block {
   margin: 60px 0 30px 0;
   width: 768px;
   display: flex;
   justify-content: space-between;
+  text-align: justify;
+  text-justify: auto;
 }
-#instructions > :first-child {
-  padding-right: 10px;
+.text-block > div {
+  width: 50%;
 }
-#instructions > :last-child {
-  padding-left: 10px;
+.text-block > div > h2 {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-bg-secondary);
+}
+.text-block > div:first-child {
+  padding-right: 20px;
+}
+.text-block > div:last-child {
+  padding-left: 20px;
+}
+.text-block > div > ul {
+  margin-top: 16px;
 }
 
 ul {
@@ -86,7 +99,7 @@ ul {
 }
 
 .skull-bullet {
-  padding-right: 3px;
+  margin-right: 8px;
   font-size: 0.8em;
   rotate: 15deg;
   transform: translateY(-1px);
@@ -94,6 +107,10 @@ ul {
 
 .pointer {
   cursor: pointer;
+}
+
+.d-none {
+  display: none;
 }
 
 #chest {
