@@ -36,14 +36,17 @@ body {
   color: var(--color-primary);
   font-family: "Montserrat", sans-serif;
   overflow-y: scroll;
+  text-align: center;
 }
 
 .container {
   margin: 0 auto;
-  min-height: 100vh;
   max-width: 700px;
+  min-height: 100vh;
   background-color: var(--color-bg-primary);
   box-shadow: 0 0 12px var(--color-bg-primary), 0 0 24px var(--color-bg-primary), 0 0 36px var(--color-locked);
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (min-width: 1024px) {
   .container {
@@ -54,11 +57,11 @@ body {
 header {
   padding: 10px;
   border-bottom: 1px solid var(--color-bg-secondary);
-  text-align: center;
 }
 
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
   font-size: 1em;
   font-weight: normal;
@@ -70,6 +73,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
+}
+
+footer {
+  padding: 10px;
+  font-size: 0.7em;
 }
 
 #chest {
