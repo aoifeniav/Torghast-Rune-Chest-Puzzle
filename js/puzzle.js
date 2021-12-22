@@ -14,7 +14,7 @@ function activatePuzzle(clickedSkullChangesCount, handles) {
         }
 
         changeRune(handle);
-        changeChain(handle);
+        changeChain(clickedSkullChangesCount, handle);
     }
 
     if (checkUnlocked(handles)) {
@@ -37,17 +37,19 @@ function changeRune(handle) {
  * Changes the chain if the handle isUnlocked.
  * @param {Object} handle 
  */
-function changeChain(handle) {
+function changeChain(clickedSkullChangesCount, handle) {
     const chain = document.getElementById(`chain_${handle.unlockColor}`);
     if (handle.isUnlocked()) {
         chain.classList.remove('fa-link');
         chain.classList.add('fa-unlink');
-    } else {
+    } else if (clickedSkullChangesCount <= handle.changesCount) {
         chain.classList.remove('fa-unlink');
         chain.classList.add('fa-link', 'locked-animation');
         setTimeout(() => {
             chain.classList.remove('locked-animation');
         }, 500);
+    } else {
+        chain.classList.remove('fa-unlink');
     }
 }
 
