@@ -319,7 +319,7 @@ button:hover {
 .text-block > div {
   margin-bottom: 30px;
 }
-.text-block > div > h2 {
+.text-block > div > h3 {
   padding-bottom: 5px;
   border-bottom: 1px solid var(--color-bg-secondary);
 }
