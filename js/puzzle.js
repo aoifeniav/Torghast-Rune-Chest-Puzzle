@@ -11,10 +11,9 @@ function activatePuzzle(clickedSkullChangesCount, handles) {
     for (let handle of handles) {
         if (clickedSkullChangesCount <= handle.changesCount) {
             handle.color = (++handle.color) % 4;
+            changeRune(handle);
+            changeChain(handle);
         }
-
-        changeRune(handle);
-        changeChain(clickedSkullChangesCount, handle);
     }
 
     if (checkUnlocked(handles)) {
@@ -37,19 +36,17 @@ function changeRune(handle) {
  * Changes the chain if the handle isUnlocked.
  * @param {Object} handle 
  */
-function changeChain(clickedSkullChangesCount, handle) {
+function changeChain(handle) {
     const chain = document.getElementById(`chain_${handle.unlockColor}`);
     if (handle.isUnlocked()) {
         chain.classList.remove('fa-link');
         chain.classList.add('fa-unlink');
-    } else if (clickedSkullChangesCount <= handle.changesCount) {
+    } else {
         chain.classList.remove('fa-unlink');
         chain.classList.add('fa-link', 'locked-animation');
         setTimeout(() => {
             chain.classList.remove('locked-animation');
         }, 500);
-    } else {
-        chain.classList.remove('fa-unlink');
     }
 }
 
