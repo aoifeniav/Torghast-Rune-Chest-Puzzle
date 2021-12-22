@@ -26,24 +26,44 @@
             <div id="chest">
             </div>
             <button id="reset">New challenge</button>
-            <details id="instructions">
-                <summary>Instructions</summary>
-                <p>Your goal is to unlock all 4 chains by finding the rune that opens each chain, which is determined at
-                    the beginning of each puzzle.</p>
-                <p>You can change the runes by clicking on the skulls. Keep in mind:</p>
-                <ul>
-                    <li>One skull will change all 4 runes.</li>
-                    <li>Another skull will change 3 runes (not the rune above the skull that changes 4 runes).</li>
-                    <li>Another skull will change 2 runes (not the runes above the skulls that change 4 and 3 runes).
-                    </li>
-                    <li>The last skull will change 1 rune (just the rune above it).</li>
-                </ul>
-                <p>First, you want to unlock the chain above the skull that changes 4 runes. Click on the skull until it
-                    is unlocked. Once it is unlocked, you won't need to click it again.</p>
-                <p>Then, do the same with the chain above the skull that changes 3 runes, then 2 runes and lastly 1
-                    rune.</p>
-                </p>
-            </details>
+            <section id="instructions">
+                <div>
+                    <p>Your goal is to unlock all 4 chains by finding the rune that opens each chain, which is
+                        determined at
+                        the beginning of the puzzle. Each rune will only unlock one chain.</p>
+                    <p>You can change the runes by clicking on the skulls.</p>
+                    <p>Keep in mind:</p>
+                    <ul>
+                        <li><i class="skull-bullet fas fa-skull"></i> One skull will change 4 runes.</li>
+                        <li><i class="skull-bullet fas fa-skull"></i> Another skull will change 3 runes.</li>
+                        <li><i class="skull-bullet fas fa-skull"></i> Another skull will change 2 runes.
+                        </li>
+                        <li><i class="skull-bullet fas fa-skull"></i> The last skull will change 1 rune.</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>
+                        The skulls that change 3, 2 and 1 runes won't change the rune above the skulls that change more
+                        runes. That is:
+                    </p>
+                    <ul>
+                        <li><i class="skull-bullet fas fa-skull"></i> The skull that changes 3 runes won't change the
+                            rune
+                            above the skull that changes 4 runes.</li>
+                        <li><i class="skull-bullet fas fa-skull"></i> The skull that changes 2 runes won't change the
+                            runes
+                            above the skulls that change 4 and 3 runes.
+                        </li>
+                        <li><i class="skull-bullet fas fa-skull"></i> The last skull will just change the rune
+                            above itself.</li>
+                    </ul>
+                    <p>Knowing this, you first want to unlock the chain above the skull that changes 4 runes. Click on the skull
+                        until it is unlocked. Once it is unlocked, you won't need to click it again.</p>
+                    <p>Then, do the same with the chain above the skull that changes 3 runes, then 2 runes and lastly 1
+                        rune. Enjoy your anima power!</p>
+                    </p>
+                </div>
+            </section>
         </main>
     </div>
 </body>
