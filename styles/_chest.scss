@@ -9,9 +9,10 @@
 }
 
 .handle-container {
+    height: 235px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
 
     :first-child {

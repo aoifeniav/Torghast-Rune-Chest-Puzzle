@@ -92,9 +92,10 @@ footer {
 }
 
 .handle-container {
+  height: 235px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 }
 .handle-container :first-child {
@@ -258,12 +259,14 @@ footer {
   }
 }
 .fa-skull {
-  scale: 0.9;
-  transition: scale 0.1s;
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9em;
+  transition: font-size 0.1s;
 }
 .fa-skull:hover {
-  transition: scale 0.1s;
-  scale: 1;
+  transition: font-size 0.1s;
+  font-size: 1em;
 }
 
 button {
@@ -325,16 +328,9 @@ button:hover {
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: square;
+  padding-left: 15px;
   margin: 0;
-}
-
-.skull-bullet {
-  margin-right: 8px;
-  font-size: 0.8em;
-  rotate: 15deg;
-  transform: translateY(-1px);
 }
 
 #hints {

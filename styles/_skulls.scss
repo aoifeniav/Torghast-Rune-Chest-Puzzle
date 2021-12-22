@@ -1,11 +1,12 @@
-// TODO: Transition not working in Edge.
 .fa-skull {
-    scale: 0.9;
-    transition: scale 0.1s;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.9em;
+    transition: font-size 0.1s;
 
     &:hover {
-        transition: scale 0.1s;
-        scale: 1;
+        transition: font-size 0.1s;
+        font-size: 1em;
     }
 }
 
