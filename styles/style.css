@@ -41,9 +41,14 @@ body {
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  width: 1024px;
+  max-width: 700px;
   background-color: var(--color-bg-primary);
   box-shadow: 0 0 12px var(--color-bg-primary), 0 0 24px var(--color-bg-primary), 0 0 36px var(--color-locked);
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
 }
 
 header {
@@ -68,7 +73,7 @@ main {
 }
 
 #chest {
-  width: 330px;
+  width: 300px;
   margin: 60px 0;
   font-size: 56px;
   text-align: center;
@@ -289,9 +294,15 @@ button:hover {
 }
 .text-block {
   margin-top: 60px;
-  width: 768px;
+  padding: 0 30px;
+  max-width: 480px;
   text-align: justify;
   text-justify: auto;
+}
+@media screen and (min-width: 1024px) {
+  .text-block {
+    max-width: 768px;
+  }
 }
 .text-block > div {
   margin-bottom: 30px;

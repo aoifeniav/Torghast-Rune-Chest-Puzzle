@@ -1,8 +1,13 @@
 .text-block {
     margin-top: 60px;
-    width: 768px;
+    padding: 0 30px;
+    max-width: 480px;
     text-align: justify;
     text-justify: auto;
+
+    @media screen and (min-width: 1024px) {
+        max-width: 768px;
+    }
 
     > div {
         margin-bottom: 30px;

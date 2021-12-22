@@ -13,9 +13,13 @@ body {
 .container {
     margin: 0 auto;
     min-height: 100vh;
-    width: 1024px;
+    max-width: 700px;
     background-color: var(--color-bg-primary);
     box-shadow: 0 0 12px var(--color-bg-primary), 0 0 24px var(--color-bg-primary), 0 0 36px var(--color-locked);
+
+    @media screen and (min-width: 1024px) {
+        max-width: 1024px;
+    }
 }
 
 header {
