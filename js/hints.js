@@ -14,11 +14,11 @@ function hintsButtonListener() {
  */
 function toggleHints() {
     const hintsBlock = document.getElementById('hints');
-    if (hintsBlock.style.display === "block" && hintsBlock.style.maxHeight) {
-        hintsBlock.style.display = "none";
-        hintsBlock.style.maxHeight = null;
+    if (hintsBlock.style.display === 'block') {
+        hintsBlock.style.display = 'none';
+        hintsBlock.style.maxHeight = 0;
     } else {
-        hintsBlock.style.display = "block";
+        hintsBlock.style.display = 'block';
         hintsBlock.style.maxHeight = `${hintsBlock.scrollHeight}px`;
     }
 }
