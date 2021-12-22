@@ -98,6 +98,6 @@ function pulseResetButton() {
 function removeSkullsPointer() {
     const skulls = document.querySelectorAll('.fa-skull');
     for (let skull of skulls) {
-        skull.classList.remove('pointer');
+        skull.style.cursor = 'default';
     }
 }

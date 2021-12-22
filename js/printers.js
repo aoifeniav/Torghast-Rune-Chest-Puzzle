@@ -63,7 +63,8 @@ function createRune(handle) {
  * @returns skull HTML element.
  */
  function createSkull(handle, handles) {
-    const skull = createElement('i', ['fa-skull', 'fas', 'pointer']);
+    const skull = createElement('i', ['fa-skull', 'fas']);
+    skull.style.cursor = 'pointer';
     skull.addEventListener('click', function () {
         activatePuzzle(handle.changesCount, handles);
     });
