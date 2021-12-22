@@ -4,9 +4,9 @@
  */
 function shuffleArray(array) {
     const shuffledArray = array
-      .map(value => ({ value, key: Math.random() }))
-      .sort((a, b) => a.key - b.key)
-      .map(({ value }) => value);
+        .map(value => ({ value, key: Math.random() }))
+        .sort((a, b) => a.key - b.key)
+        .map(({ value }) => value);
 
     return shuffledArray;
 }
@@ -30,7 +30,7 @@ function randomInteger(min, max) {
 function createElement(htmlTag, classNames) {
     const element = document.createElement(htmlTag);
     if (classNames) {
-    element.classList.add(...classNames);
+        element.classList.add(...classNames);
     }
     return element;
 }

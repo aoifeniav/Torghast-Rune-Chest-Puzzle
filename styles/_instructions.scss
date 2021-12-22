@@ -1,0 +1,57 @@
+.text-block {
+    margin: 60px 0 30px 0;
+    width: 768px;
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+    text-justify: auto;
+
+    > div {
+        width: 50%;
+
+        > h2 {
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--color-bg-secondary);
+        }
+
+        &:first-child {
+            padding-right: 20px;
+        }
+
+        &:last-child {
+            padding-left: 20px;
+        }
+
+        & ul {
+            margin-top: 16px;
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skull-bullet {
+    margin-right: 8px;
+    font-size: 0.8em;
+    rotate: 15deg;
+    transform: translateY(-1px);
+}
+
+#hints {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+
+    &-button {
+        @include pointer;
+    }
+
+    &-arrow {
+        margin-left: 5px;
+    }
+}

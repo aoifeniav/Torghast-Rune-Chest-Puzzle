@@ -45,4 +45,5 @@ function setColors(handles) {
 window.onload = function () {
     initHandles();
     resetButtonListener();
+    hintsButtonListener();
 }
