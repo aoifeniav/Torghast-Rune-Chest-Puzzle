@@ -9,10 +9,6 @@ button {
     @include pointer;
 }
 
-#reset {
-    margin-top: 100px;
-}
-
 .button-pulse {
     animation: button-pulse 1.5s infinite alternate;
 }
