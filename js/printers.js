@@ -48,7 +48,6 @@ function createChain(handle) {
  */
 function createRune(handle) {
     const rune = createElement('span');
-    // rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`; 
     rune.classList = 'rune'; 
     rune.innerText = RUNE_SETTINGS[handle.color].text;
     rune.setAttribute('id', `rune_${handle.unlockColor}`);

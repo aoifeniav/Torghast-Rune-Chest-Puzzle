@@ -27,7 +27,6 @@ function activatePuzzle(clickedSkullChangesCount, handles) {
  */
 function changeRune(handle) {
     const rune = document.getElementById(`rune_${handle.unlockColor}`);
-    rune.classList = `rune ${RUNE_SETTINGS[handle.color].color}`;
     rune.innerText = RUNE_SETTINGS[handle.color].text;
     rune.setAttribute('data-color', RUNE_SETTINGS[handle.color].color);
 }
