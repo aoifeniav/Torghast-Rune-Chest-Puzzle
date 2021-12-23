@@ -29,6 +29,11 @@ function changeRune(handle) {
     const rune = document.getElementById(`rune_${handle.unlockColor}`);
     rune.innerText = RUNE_SETTINGS[handle.color].text;
     rune.setAttribute('data-color', RUNE_SETTINGS[handle.color].color);
+
+    // Re-renders the rune (keeping its size in DOM) so color properties are properly applied (for Safari compatibility).
+    rune.style.display = 'none';
+    rune.offsetHeight;
+    rune.style.display = '';
 }
 
 /**
