@@ -8,7 +8,7 @@ The skulls change their respective rune, but can also change others according to
 - One skull changes 4 runes.
 - One skull changes 3 runes.
 - One skull changes 2 runes.
-- One skull changes 1 runes.
+- One skull changes 1 rune.
 
 When a rune ID matches with its corresponding chain's unlocking rune ID, the chain is unlocked and its icon changes. If the rune ID doesn't match, the chain will shake. When all chains are unlocked, the game ends and is blocked.
 
